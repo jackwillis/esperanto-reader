@@ -1,8 +1,8 @@
 {
-  "title": "Legado-helpanto dictionary",
-  "$id": "https://www.attac.us/legado-helpanto/schema.json#",
+  "title": "esperanto-reader dictionary",
+  "$id": "https://www.attac.us/esperanto-reader/schema.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
-  "$comment": "Read more at <https://github.com/jackwillis/legado-helpanto>.",
+  "$comment": "Read more at <https://github.com/jackwillis/esperanto-reader>.",
   "type": "object",
   "required": [
     "entries"
