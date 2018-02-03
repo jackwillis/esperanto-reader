@@ -1,0 +1,41 @@
+{
+  "title": "Legado-helpanto dictionary",
+  "$id": "https://www.attac.us/legado-helpanto/schema.json#",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$comment": "Read more at <https://github.com/jackwillis/legado-helpanto>.",
+  "type": "object",
+  "required": [
+    "entries"
+  ],
+  "properties": {
+    "entries": {
+      "description": "The dictionary entries and their values",
+      "type": "object",
+      "patternProperties": {
+        "": {
+          "required": [
+            "en"
+          ],
+          "properties": {
+            "en": {
+              "description": "The English-language definition of a dictionary entry",
+              "type": "string"
+            },
+            "refs": {
+              "description": "A list of names of other relevant dictionary entries",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "noLink": {
+              "description": "Requires the client to NOT display a link to an online dictionary for this entry",
+              "type": "boolean",
+              "default": false
+            }
+          }
+        }
+      }
+    }
+  }
+}

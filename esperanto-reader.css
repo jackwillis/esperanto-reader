@@ -1,0 +1,60 @@
+/* This file is part of Esperanto-reader.
+ *
+ * Esperanto-reader is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Esperanto-reader is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with Esperanto-reader.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+[data-eo] {
+    border-bottom: 1px dotted gray;
+}
+[data-eo]:hover,
+[data-eo]:focus {
+    background-color: navajowhite;
+
+    border: none;
+    box-shadow: 0 0 0 2px chocolate;
+
+    cursor: help;
+}
+[data-eo]:active {
+    background-color: limegreen;
+}
+[data-eo].no-entry {
+    background-color: yellow;
+}
+.eo-tooltip {
+    position: absolute;
+
+    width: 10em;
+
+    background-color: whitesmoke;
+    border: 2px solid chocolate;
+}
+.eo-tooltip[aria-hidden=true] {
+    visibility: hidden;
+}
+.eo-tooltip dl,
+.eo-tooltip p,
+.eo-close {
+    margin: 0.5em;
+}
+.eo-tooltip dt {
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+.eo-tooltip dd {
+    margin-left: 2em;
+}
+.eo-close {
+    float: right;
+}

@@ -1,0 +1,367 @@
+{
+  "$ref": "https://www.attac.us/esperanto-reader/schema.json#",
+  "authors": [ "Jack Willis" ],
+  "sources": [ "https://en.wiktionary.org/" ],
+  "license": "CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0/>",
+  "about": "This is an example dictionary file which is distributed with esperanto-reader <https://github.com/jackwillis/esperanto-reader/>",
+  "entries": {
+
+
+    "dis-": {
+      "en": "apart (indicates separation, dissemination)"
+    },
+    "ki-": {
+      "en": "interrogative and relative correlative prefix"
+    },
+    "ti-": {
+      "en": "demonstrative correlative prefix"
+    },
+
+
+    "-ad-": {
+      "en": "indicates duration of an action; turns a verb into a noun"
+    },
+    "-aĵ-": {
+      "en": "something made from or possessing the quality of"
+    },
+    "-eg-": {
+      "en": "denotes augmentation, intensity, a higher or extreme degree"
+    },
+    "-ej-": {
+      "en": "indicates a place designed for the purpose expressed by the root"
+    },
+
+
+    "-e": {
+      "en": "correlative suffix of place"
+    },
+    "-igi": {
+      "en": "to cause to be"
+    },
+    "-isto": {
+      "en": "a person who belongs to a profession occupied with"
+    },
+    "-u": {
+      "en": "correlative suffix of individuals"
+    },
+
+
+    "afero": {
+      "en": "thing; affair, issue; concern"
+    },
+    "al": {
+      "en": "to; toward; indicates direct object"
+    },
+    "amaso": {
+      "en": "mass; heap; crowd"
+    },
+    "apud": {
+      "en": "near; beside"
+    },
+    "arbo": {
+      "en": "tree"
+    },
+    "bieno": {
+      "en": "farm, estate"
+    },
+    "bona": {
+      "en": "good"
+    },
+    "da": {
+      "en": "of (referring to quantity)"
+    },
+    "danĝero": {
+      "en": "danger"
+    },
+    "de": {
+      "en": "from; possessed by; done, written or composed by"
+    },
+    "detalo": {
+      "en": "detail"
+    },
+    "disigi": {
+      "en": "to separate (something); to break (something) apart",
+      "refs": [ "dis-", "-igi" ]
+    },
+    "du": {
+      "en": "two"
+    },
+    "dua": {
+      "en": "second",
+      "refs": [ "du" ]
+    },
+    "dum": {
+      "en": "while"
+    },
+    "ekstere": {
+      "en": "outside; outwards"
+    },
+    "ekzisti": {
+      "en": "to exist"
+    },
+    "el": {
+      "en": "from (of); made of"
+    },
+    "en": {
+      "en": "in, within, inside; into"
+    },
+    "esti": {
+      "en": "to be"
+    },
+    "eviti": {
+      "en": "to avoid, to evade"
+    },
+    "februaro": {
+      "en": "February"
+    },
+    "fino": {
+      "en": "end, ending"
+    },
+    "forno": {
+      "en": "oven, furnace"
+    },
+    "ĝardeno": {
+      "en": "garden"
+    },
+    "ĝi": {
+      "en": "it"
+    },
+    "ĵetadi": {
+      "en": "to throw (habitual aspect)",
+      "refs": [ "ĵeti", "-ad-" ]
+    },
+    "ĵeti": {
+      "en": "to throw"
+    },
+    "kaj": {
+      "en": "and"
+    },
+    "kameno": {
+      "en": "fireplace"
+    },
+    "ke": {
+      "en": "that"
+    },
+    "kie": {
+      "en": "where",
+      "refs": [ "ki-", "-e" ]
+    },
+    "kiu": {
+      "en": "who; which",
+      "refs": [ "ki-", "-u" ]
+    },
+    "konfuzi": {
+      "en": "to confuse"
+    },
+    "kun": {
+      "en": "where"
+    },
+    "kverko": {
+      "en": "oak"
+    },
+    "la": {
+      "en": "the"
+    },
+    "labori": {
+      "en": "to work"
+    },
+    "lasi": {
+      "en": "to let"
+    },
+    "manĝaĵ-vendejo": {
+      "en": "grocery store",
+      "refs": [ "manĝaĵo", "manĝi", "-aĵ-", "vendejo", "vendi", "-ej-" ],
+      "noLink": true
+    },
+    "manĝaĵ-vendisto": {
+      "en": "grocer",
+      "refs": [ "manĝaĵo", "manĝi", "-aĵ-", "vendisto", "vendi", "-isto" ],
+      "noLink": true
+    },
+    "manĝaĵo": {
+      "en": "food",
+      "refs": [ "manĝi", "-aĵ-" ]
+    },
+    "manĝi": {
+      "en": "to eat"
+    },
+    "manĝo": {
+      "en": "meal"
+    },
+    "mateno": {
+      "en": "morning"
+    },
+    "matenmanĝo": {
+      "en": "breakfast",
+      "refs": [ "mateno", "manĝo", "manĝi" ]
+    },
+    "memori": {
+      "en": "to remember"
+    },
+    "menso": {
+      "en": "mind"
+    },
+    "meti": {
+      "en": "to put, to place"
+    },
+    "multe": {
+      "en": "a lot"
+    },
+    "ne": {
+      "en": "no; not; non–"
+    },
+    "neĝa": {
+      "en": "snowy",
+      "refs": [ "neĝo" ]
+    },
+    "neĝo": {
+      "en": "snow"
+    },
+    "oni": {
+      "en": "one, people in general"
+    },
+    "onia": {
+      "en": "one's",
+      "refs": [ "oni" ]
+    },
+    "pasi": {
+      "en": "to pass, to pass by"
+    },
+    "pasigi": {
+      "en": "to pass, to spend",
+      "refs": [ "pasi", "-igi" ]
+    },
+    "peco": {
+      "en": "piece"
+    },
+    "planti": {
+      "en": "to plant"
+    },
+    "por": {
+      "en": "for, for the benefit of"
+    },
+    "porti": {
+      "en": "to carry"
+    },
+    "posedi": {
+      "en": "to possess, to own"
+    },
+    "prefere": {
+      "en": "preferably",
+      "refs": [ "preferi" ]
+    },
+    "preferi": {
+      "en": "to prefer"
+    },
+    "pri": {
+      "en": "about"
+    },
+    "propra": {
+      "en": "(one's) own"
+    },
+    "radiatoro": {
+      "en": "radiator",
+      "noLink": true
+    },
+    "rifuzi": {
+      "en": "to refuse"
+    },
+    "sama": {
+      "en": "same"
+    },
+    "samtempe": {
+      "en": "at the same time",
+      "refs": [ "sama", "tempo" ]
+    },
+    "se": {
+      "en": "if"
+    },
+    "semajnfino": {
+      "en": "weekend",
+      "refs": [ "semajno", "fino" ],
+      "noLink": true
+    },
+    "semajno": {
+      "en": "week"
+    },
+    "spirita": {
+      "en": "spiritual",
+      "refs": [ "spirito" ]
+    },
+    "spirito": {
+      "en": "spirit"
+    },
+    "stakigi": {
+      "en": "to stack (something)",
+      "refs": [ "stako", "-igi" ],
+      "noLink": true
+    },
+    "stako": {
+      "en": "stack"
+    },
+    "supozi": {
+      "en": "to suppose"
+    },
+    "tempo": {
+      "en": "time"
+    },
+    "tibio": {
+      "en": "shin, tibia"
+    },
+    "tie": {
+      "en": "there",
+      "refs": [ "ti-", "-e" ]
+    },
+    "tiu": {
+      "en": "that one/person",
+      "refs": [ "ti-", "-u" ]
+    },
+    "tranĉi": {
+      "en": "to cut, to slice"
+    },
+    "unu": {
+      "en": "one"
+    },
+    "unua": {
+      "en": "first",
+      "refs": [ "unu" ]
+    },
+    "urbo": {
+      "en": "city, town"
+    },
+    "varmego": {
+      "en": "heat",
+      "refs": ["varmo", "-eg-"]
+    },
+    "varmigi": {
+      "en": "to make warm, to warm",
+      "refs": [ "varmo", "-igi" ]
+    },
+    "varmo": {
+      "en": "warmth"
+    },
+    "vendejo": {
+      "en": "store",
+      "refs": [ "vendi", "-ej-" ]
+    },
+    "vendi": {
+      "en": "to sell"
+    },
+    "vendisto": {
+      "en": "vendor",
+      "refs": [ "vendi", "-isto" ]
+    },
+    "veni": {
+      "en": "to come"
+    },
+    "ventego": {
+      "en": "windstorm",
+      "refs": [ "vento", "-eg-" ]
+    },
+    "vento": {
+      "en": "wind"
+    }
+
+
+  }
+}

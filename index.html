@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Esperanto reading assistant early demo</title>
+
+    <style>
+        body {
+            font: 14pt/24pt "PT Serif", Constantia, "Liberation Serif", "Droid Serif", "DejaVu Serif", Georgia, serif;
+        }
+        h1, h2, .eo-tooltip {
+            font-family: "PT Sans", Calibri, "Gill Sans", "Liberation Sans", "Droid Sans", "DejaVu Sans Condensed", sans-serif;
+        }
+        .eo-tooltip {
+            font-size: 12pt;
+            line-height: 15pt;
+        }
+
+        body {
+            margin: auto;
+            padding: 1em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 80em;
+        }
+        h1, h2 {
+            line-height: 1.1;
+        }
+        p, dl {
+            hyphens: auto;
+        }
+        .big-initial::first-letter {
+            font-size: 250%;
+            margin: 0.25em;
+            float: left;
+        }
+        .lead {
+            font-variant: small-caps;
+        }
+
+        .helpanto p {
+            line-height: 25pt;
+            word-spacing: 1px;
+            hyphens: none;
+        }
+        .book p {
+            text-indent: 1em;
+        }
+        .book h2 + p {
+            text-indent: initial;
+        }
+        body > section {
+            width: 30em;
+            border-style: solid;
+            border-width: 5px;
+            margin: 1em;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        body > section p {
+            margin: 1.5rem;
+        }
+        body > section h1,
+        body > section h2 {
+            margin: 0;
+            padding: 0.5em 1.5rem;
+            color: white;
+        }
+        body > section[lang=en] {
+            border-color: #274865;
+        }
+        body > section[lang=en] h1,
+        body > section[lang=en] h2 {
+            background: #346187;
+            border-bottom: 5px solid #274865;
+        }
+        body > section[lang=eo] {
+            border-color: #006000;
+        }
+        body > section[lang=eo] h1,
+        body > section[lang=eo] h2 {
+            background: #009600;
+            border-bottom: 5px solid #006000;
+        }
+
+        /* Make close button bigger for mobile users */
+        @media (max-width: 24em) {
+            .eo-tooltip .eo-close {
+                font-size: 125%;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="esperanto-reader.css">
+    <script src="esperanto-reader.js" data-vortaro="dictionary.json"></script>
+</head>
+<body>
+
+    <section lang="eo">
+        <h1>Pruvo de koncepto por Esperanta legado-helpanto</h1>
+
+        <p>
+            <strong>Sube estas ekstrakto</strong> de
+            <cite>Almanako de Graflando Sand (A Sand County Almanac)</cite>
+            de Aldo Leopold —
+            unue, traduko en Esperanto, due, la originala teksto en la angla.
+            La Esperanta sekcio enhavas difinojn por ĉiu vorto, indikitan per substrekoj.
+        </p>
+        <p>
+            <strong>Ŝvebu sur vorton</strong> por unu sekondo, por montri sian difinon.
+            Por restigi la difino-konsileton, alklaku aŭ tuŝu la vorton.
+            Por movi al la sekvan vorton, uzu la tabklavon.
+            Por fermi la difino-konsileton, uzu la eskapilon, aŭ alklaku la fermbutonon.
+        </p>
+        <p>
+            <strong><a href="https://github.com/jackwillis/esperanto-reader">Esperanto-reader</a></strong>
+            estas libera programaro.
+        </p>
+    </section>
+
+    <section lang="en">
+        <h1>Esperanto reading assistant early demo</h1>
+
+        <p>
+            <strong>Below is an excerpt</strong>
+            from Aldo Leopold's
+            <a href="https://web.archive.org/web/20180202222223/https://faculty.ithaca.edu/mismith/docs/environmental/leopold.pdf"><cite>A Sand County Almanac</cite></a> —
+            first an Esperanto translation, then the original English.
+            The Esperanto section contains definitions for each word, indicated by underlines.
+        </p>
+        <p>
+            <strong>Hover over a word</strong> for a second to show its definition.
+            Clicking or tapping the word will cause the definition tooltip to remain in place.
+            Use the tab key to move to the next word.
+            Use the escape key or the close button to close the definition tooltip.
+        </p>
+        <p>
+            <strong><a href="https://github.com/jackwillis/esperanto-reader">Esperanto-reader</a></strong>
+            is free software.
+        </p>
+    </section>
+
+    <section class="helpanto book" lang="eo">
+        <h2>
+            <span data-eo>Februaro</span> –
+            <span data-eo>Bona</span>
+            <span data-eo>Kverko</span>
+        </h2>
+
+            <p class="big-initial">
+                <strong class="lead">
+                    <span data-eo="esti">Estas</span> <span data-eo>du</span> <span data-eo="spirita">spiritaj</span>
+                </strong>
+                <span data-eo="danĝero">danĝeroj</span> <span data-eo>ne</span> <span data-eo>posedi</span> <span data-eo="bieno">bienon</span>.
+                <span data-eo>La</span> <span data-eo>unua</span> <span data-eo="esti">estas</span> <span data-eo>la</span> <span data-eo>danĝero</span> <span data-eo>supozi</span>, <span data-eo>ke</span> <span data-eo>la</span> <span data-eo>matenmanĝo</span> <span data-eo="veni">venas</span> <span data-eo>el</span> <span data-eo>la</span> <span data-eo>manĝaĵ-vendejo</span>,
+                <span data-eo>kaj</span> <span data-eo>la</span> <span data-eo>dua</span>, <span data-eo>ke</span> <span data-eo>la</span> <span data-eo>varmego</span> <span data-eo="veni">venas</span> <span data-eo>el</span> <span data-eo>forno</span>.
+            </p>
+
+            <p>
+                <span data-eo>Por</span> <span data-eo>eviti</span> <span data-eo>la</span> <span data-eo="unua">unuan</span> <span data-eo="danĝero">danĝeron</span>,
+                <span data-eo>oni</span> <span data-eo="planti">plantu</span> <span data-eo="ĝardeno">ĝardenon</span>,
+                <span data-eo>prefere</span> <span data-eo>kie</span> <span data-eo>ne</span> <span data-eo="ekzisti">ekzistas</span> <span data-eo>manĝaĵ-vendisto</span> <span data-eo>por</span> <span data-eo>konfuzi</span> <span data-eo>la</span> <span data-eo="afero">aferon</span>.
+            </p>
+
+            <p>
+                <span data-eo>Por</span> <span data-eo>eviti</span> <span data-eo>la</span> <span data-eo="dua">duan</span>, <span data-eo>oni</span> <span data-eo="meti">metu</span> <span data-eo="peco">pecon</span> <span data-eo>de</span> <span data-eo>bona</span> <span data-eo>kverko</span> <span data-eo>en</span> <span data-eo>la</span> <span data-eo="kameno">kamenon</span>,
+                <span data-eo>prefere</span> <span data-eo>kie</span> <span data-eo>ne</span> <span data-eo="esti">estas</span> <span data-eo>forno</span>, <span data-eo>kaj</span> <span data-eo="lasi">lasu</span> <span data-eo="ĝi">ĝin</span> <span data-eo>varmigi</span> <span data-eo="onia">oniajn</span> <span data-eo="tibio">tibiojn</span>,
+                <span data-eo>dum</span> <span data-eo>ekstere</span>, <span data-eo="februaro">februara</span> <span data-eo>neĝa</span> <span data-eo>ventego</span> <span data-eo="ĵetadi">ĵetadas</span> <span data-eo>la</span> <span data-eo="arbo">arbojn</span>.
+                <span data-eo>Se</span> <span data-eo>oni</span> <span data-eo="tranĉi">tranĉis</span>, <span data-eo="disigi">disigis</span>, <span data-eo="porti">portis</span>, <span data-eo>kaj</span> <span data-eo="stakigi">stakigis</span>
+                <span data-eo="onia">onian</span> <span data-eo="propra">propran</span> <span data-eo="bona">bonan</span> <span data-eo="kverko">kverkon</span>,
+                <span data-eo>kaj</span> <span data-eo="lasi">lasis</span> <span data-eo="onia">onian</span> <span data-eo="menso">menson</span> <span data-eo>labori</span> <span data-eo>samtempe</span>,
+                <span data-eo>oni</span> <span data-eo="memori">memoros</span> <span data-eo>multe</span> <span data-eo>pri</span> <span data-eo>tie</span>,
+                <span data-eo>de</span> <span data-eo>kie</span> <span data-eo="veni">venas</span> <span data-eo>la</span> <span data-eo>varmego</span>, <span data-eo>kaj</span> <span data-eo>kun</span> <span data-eo>amaso</span> <span data-eo>da</span> <span data-eo="detalo">detaloj</span>
+                <span data-eo="rifuzi">rifuzitaj</span> <span data-eo>al</span> <span data-eo="tiu">tiuj</span>, <span data-eo="kiu">kiuj</span> <span data-eo="pasigi">pasigas</span> <span data-eo>la</span> <span data-eo="semajnfino">semajnfinon</span> <span data-eo>en</span> <span data-eo>urbo</span> <span data-eo>apud</span> <span data-eo>radiatoro</span>.
+            </p>
+    </section>
+
+    <section class="book" lang="en">
+        <h2>February – Good Oak</h2>
+
+        <p class="big-initial">
+            <strong class="lead">There are two</strong> spiritual dangers in not owning a
+            farm. One is the danger of supposing that breakfast
+            comes from the grocery, and the other that heat comes
+            from a furnace.
+        </p>
+
+        <p>
+            To avoid the first danger, one should plant a
+            garden, preferably where there is no grocer to confuse
+            the issue.
+        </p>
+
+        <p>
+            To avoid the second, he should lay a split of
+            good oak on the and&shy;irons, preferably where there is no
+            furnace, and let it warm his shins while a February
+            blizzard tosses the trees outside. If one has cut, split,
+            hauled, and piled his own good oak, and let his mind
+            work the while, he will remember much about where
+            the heat comes from, and with a wealth of detail
+            denied to those who spend the weekend in town
+            astride a radiator.
+        </p>
+    </section>
+
+</body>
+</html>
