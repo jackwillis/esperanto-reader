@@ -16,7 +16,9 @@
   },
   "homepage": "https://github.com/jackwillis/esperanto-reader#readme",
   "devDependencies": {
+    "ts-loader": "^3.4.0",
     "typescript": "^2.7.1",
-    "awesome-typescript-loader": "^3.4.1"
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "webpack": "^3.10.0"
   }
 }

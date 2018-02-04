@@ -1,5 +1,8 @@
+var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+
 module.exports = {
     entry: "./src/esperanto-reader.ts",
+
     output: {
         filename: "./dist/bundle.js",
     },
@@ -10,7 +13,11 @@ module.exports = {
 
     module: {
         loaders: [
-            { test: /\.ts$/, loader: "awesome-typescript-loader" }
+            { test: /\.ts$/, loader: "ts-loader" }
         ],
-    }
+    },
+
+    plugins: [
+        new UglifyJSPlugin()
+    ]
 };

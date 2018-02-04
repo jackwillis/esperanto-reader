@@ -1,0 +1,89 @@
+body {
+    font: 19px/29px Cambria, "Linux Libertine G", "Droid Serif", Baskerville, Georgia, serif;
+}
+h1, h2, .eo-tooltip {
+    font-family: Calibri, Carlito, "Fira Sans", "Ubuntu", "Gill Sans", sans-serif;
+}
+.eo-tooltip {
+    font-size: 16px;
+    line-height: 21px;
+}
+h1, h2 {
+    line-height: 1.1;
+}
+/* Adjust typography for mobile users */
+@media (max-width: 24em) {
+    body {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .eo-tooltip .eo-close {
+        font-size: 125%;
+    }
+}
+
+p, dl {
+    hyphens: auto;
+}
+.big-initial::first-letter {
+    font-size: 250%;
+    margin: 0.25em;
+    float: left;
+}
+.lead {
+    font-variant: small-caps;
+}
+.helpanto p {
+    line-height: 30px;
+    word-spacing: 1px;
+    hyphens: none;
+}
+.book p {
+    text-indent: 1em;
+}
+.book h2 + p {
+    text-indent: initial;
+}
+
+
+.chunk {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+section {
+    width: 20em;
+    max-width: 42em;
+    border-style: solid;
+    border-width: 5px;
+    margin: 1em;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+section p {
+    margin: 1.5rem;
+}
+section h1,
+section h2 {
+    margin: 0;
+    padding: 0.5em 1.5rem;
+    color: white;
+}
+section[lang=en] {
+    border-color: #274865;
+}
+section[lang=en] h1,
+section[lang=en] h2 {
+    background: #346187;
+    border-bottom: 5px solid #274865;
+}
+section[lang=eo] {
+    border-color: #006000;
+}
+section[lang=eo] h1,
+section[lang=eo] h2 {
+    background: #088711;
+    border-bottom: 5px solid #006000;
+}

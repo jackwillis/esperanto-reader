@@ -6,22 +6,26 @@
 
 Include the CSS:
 
-    <link rel="stylesheet" href="esperanto-reader.css">
+```html
+<link rel="stylesheet" href="esperanto-reader.css">
+```
 
 Either automatically load the dictionary from a JSON file:
 
-    <script src="esperanto-reader.js" data-vortaro="dictionary.json"></script>
+```html
+<script src="esperanto-reader.js" data-vortaro="dictionary.json"></script>
+```
  
 Or generate the dictionary object in JavaScript:
 
-    <script src="esperanto-reader.js"></script>
-    <script>
-      const dictionary = { entries: { ... } };
-      
-      document.addEventListener("DOMContentLoaded", () => {
-        esperantoReader(dictionary);
-      });
-    </script>
+```js
+const esperantoReader = require("esperanto-reader");
+const dictionary = { entries: { ... } };
+
+document.addEventListener("DOMContentLoaded", () => {
+    esperantoReader(dictionary);
+});
+```
 
 ### Composing a bilingual document
 
