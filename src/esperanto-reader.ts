@@ -44,7 +44,7 @@
     }
 
     function getPhrase(node) {
-        return (node.dataset.eo || node.innerText).toLowerCase();
+        return ((node as HTMLElement).dataset.eo || node.innerText).toLowerCase();
     }
 
     function buildDefinitionList(pairs) {
@@ -95,16 +95,14 @@
     }
 
     const selectedNodeClass = "eo-selected";
+    const tooltipClass = "eo-tooltip";
     const noEntryClass = "no-entry";
 
-    function esperantoReader(dictionary) {
-        let lastNode = null;
-        let tooltipShouldPersist = false;
-
+    function createTooltip() {
         let tooltip = document.createElement("div");
         tooltip.classList.add("eo-tooltip");
         tooltip.setAttribute("role", "tooltip");
-        tooltip.setAttribute("aria-hidden", true);
+        tooltip.setAttribute("aria-hidden", "true");
 
         let closeButton = document.createElement("button");
         closeButton.classList.add("eo-close");
@@ -117,6 +115,15 @@
         tooltip.appendChild(closeButton);
         tooltip.appendChild(tooltipBody);
         document.body.appendChild(tooltip);
+
+        return { tooltip, tooltipBody, closeButton };
+    }
+
+    function esperantoReader(dictionary) {
+        let lastNode = null;
+        let tooltipShouldPersist = false;
+
+        let { tooltip, tooltipBody, closeButton } = createTooltip();
 
         function loadTooltip(node) {
             tooltipBody.innerHTML = "";
@@ -134,7 +141,7 @@
             tooltip.style.top = (node.offsetTop + node.offsetHeight) + "px";
             tooltip.style.left = (node.offsetLeft + (node.offsetWidth / 2)) + "px";
 
-            tooltip.setAttribute("aria-hidden", false);
+            tooltip.setAttribute("aria-hidden", "false");
 
             // keep the tooltip within the horizontal bounds of the node's parent element
 
@@ -162,14 +169,14 @@
         }
 
         function closeTooltip() {
-            tooltip.setAttribute("aria-hidden", true);
+            tooltip.setAttribute("aria-hidden", "true");
             setPersistence(false);
         }
 
         // All the nodes in the document which can open the tooltip
         let eoNodes = document.querySelectorAll("[data-eo]");
 
-        Array.from(eoNodes).forEach((node) => {
+        [].slice.call(eoNodes).forEach((node) => {
 
             // Call attention to words with no dictionary entries (for dictionary authors).
             const phrase = getPhrase(node);
@@ -185,7 +192,7 @@
             });
 
             function onfocus() {
-                loadTooltip(node, lastNode);
+                loadTooltip(node);
                 lastNode = node;
                 setPersistence(true);
             }
@@ -237,7 +244,7 @@
     // autoload stuff
 
     document.addEventListener("DOMContentLoaded", function() {
-        var pointerElement = document.querySelector("script[data-vortaro]");
+        var pointerElement = <HTMLElement>document.querySelector("script[data-vortaro]");
 
         var dictionaryUrl = pointerElement && pointerElement.dataset["vortaro"];
         if (dictionaryUrl) {

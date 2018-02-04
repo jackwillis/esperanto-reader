@@ -1,0 +1,22 @@
+{
+  "name": "esperanto-reader",
+  "version": "0.0.1",
+  "description": "dictionary tooltip for esperanto",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackwillis/esperanto-reader.git"
+  },
+  "keywords": [
+    "esperanto"
+  ],
+  "author": "Jack Willis <jack@attac.us>",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jackwillis/esperanto-reader/issues"
+  },
+  "homepage": "https://github.com/jackwillis/esperanto-reader#readme",
+  "devDependencies": {
+    "typescript": "^2.7.1",
+    "awesome-typescript-loader": "^3.4.1"
+  }
+}
