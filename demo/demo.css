@@ -1,5 +1,5 @@
 body {
-    font: 19px/29px Cambria, "Linux Libertine G", "Droid Serif", Baskerville, Georgia, serif;
+    font-family: Cambria, "Linux Libertine G", "Droid Serif", Baskerville, Georgia, serif;
 }
 h1, h2, .eo-tooltip {
     font-family: Calibri, Carlito, "Fira Sans", "Ubuntu", "Gill Sans", sans-serif;
@@ -11,15 +11,16 @@ h1, h2, .eo-tooltip {
 h1, h2 {
     line-height: 1.1;
 }
-/* Adjust typography for mobile users */
-@media (max-width: 24em) {
-    body {
-        font-size: 16px;
-        line-height: 21px;
-    }
 
-    .eo-tooltip .eo-close {
-        font-size: 125%;
+
+body {
+    font-size: 17px;
+    line-height: 26px;
+}
+@media (min-width: 800px) {
+    body {
+        font-size: 19px;
+        line-height: 29px;
     }
 }
 
@@ -54,14 +55,20 @@ p, dl {
     justify-content: center;
 }
 section {
-    width: 20em;
-    max-width: 42em;
+    width: 200px;
+    max-width: 800px;
     border-style: solid;
     border-width: 5px;
-    margin: 1em;
+    margin: 0.25em;
     flex-grow: 1;
     flex-shrink: 1;
 }
+@media (min-width: 800px) {
+    section {
+        margin: 0.5em;
+    }
+}
+
 section p {
     margin: 1.5rem;
 }
