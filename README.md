@@ -1,5 +1,7 @@
 # Esperanto reading assistant (Legado-helpanto)
 
+You may visit a [live demo](https://www.attac.us/esperanto-reader/demo/) of esperanto-reader.
+
 ## Usage
 
 ### Installation
